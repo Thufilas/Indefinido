@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Apresentacao", "0 - Apresentacao", "{6415CFEC-35A5-4072-BF23-BD4C2155ACBD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Dominio", "1 - Dominio", "{733E93FA-95EF-423B-82BD-0F0A408BE460}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Servico", "2 - Servico", "{156BB4E4-7357-4BBA-966E-9905780E49BE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Infra", "3 - Infra", "{A59537C2-F83C-4908-9FDA-2343957E73E1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Comum", "4 - Comum", "{74646B8A-A79C-40CC-8225-724D075F008A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RMJ", "RMJ\RMJ.csproj", "{7D67F86E-DB45-4167-B5A0-463BACE9B0D7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D67F86E-DB45-4167-B5A0-463BACE9B0D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D67F86E-DB45-4167-B5A0-463BACE9B0D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D67F86E-DB45-4167-B5A0-463BACE9B0D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D67F86E-DB45-4167-B5A0-463BACE9B0D7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7D67F86E-DB45-4167-B5A0-463BACE9B0D7} = {733E93FA-95EF-423B-82BD-0F0A408BE460}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4F098A39-DF8F-4504-B28D-33176FE0B433}
+	EndGlobalSection
+EndGlobal
