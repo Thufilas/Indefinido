@@ -4,7 +4,7 @@ using System.Text;
 
 namespace RMJ.Dominio
 {
-    class Desenvolvedora
+    public class Desenvolvedora
     {
         public int idDesenvolvedora { get; set; }
 

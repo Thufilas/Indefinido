@@ -4,7 +4,7 @@ using System.Text;
 
 namespace RMJ.Dominio
 {
-    class Login
+    public class Login
     {
         public int idLogin { get; set; }
         public string Nickname { get; set; }
