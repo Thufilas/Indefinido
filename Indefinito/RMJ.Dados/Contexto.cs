@@ -3,10 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using RMJ.Dominio;
+using RMJ.Dados.Configuracoes;
 
 namespace RMJ.Dados
 {
-    class Contexto : DbContext
+    public class Contexto : DbContext
     {
        //1.CLASSES - ENTIDADES - TABELAS
        //1. INICIO
@@ -21,9 +22,30 @@ namespace RMJ.Dados
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-
+            optionsBuilder.UseSqlServer("server=10.107.176.41;database=dbLAB2_2020;user id=visualstudio;password=visualstudio;");
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+
+            //2. DEFINIÇÃO DAS CONFIGURAÇÕES DAS CLASSES
+            //2. INICIO
+            modelBuilder.ApplyConfiguration(new ConfiguracaoAvaliacao());
+
+            modelBuilder.ApplyConfiguration(new ConfiguracaoDistribuidora());
+
+            modelBuilder.ApplyConfiguration(new ConfiguracaoEstiloDeJogo());
+
+            modelBuilder.ApplyConfiguration(new ConfiguracaoJogo());
+
+            modelBuilder.ApplyConfiguration(new ConfiguracaoUsuario());
+
+            modelBuilder.ApplyConfiguration(new ConfiguracaoLogin());
+
+            modelBuilder.ApplyConfiguration(new ConfiguracaoImagens());
+
+            //2. FIM
+        }
 
 
     }

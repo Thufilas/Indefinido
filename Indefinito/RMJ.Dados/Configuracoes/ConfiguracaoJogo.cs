@@ -17,7 +17,7 @@ namespace RMJ.Dados.Configuracoes
 			builder.Property(f => f.Nome).HasColumnName("Nome")
                 .IsRequired()
 				.HasMaxLength(50);
-			builder.Property(f => f.Datalancamento).HasColumnName("Datalancamento");
+			builder.Property(f => f.DataLancamento).HasColumnName("Datalancamento");
 			builder.Property(f => f.Descricao).HasColumnName("Descricao")
 				.IsRequired()
 				.HasMaxLength(100);
