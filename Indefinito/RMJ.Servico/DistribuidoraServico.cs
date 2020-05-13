@@ -23,36 +23,39 @@ namespace RMJ.Servico
 
             try
             {
-                entidade.idDistribuidora = 1;
-
-                if (!entidade.Nome.Validar())
+                if(entidade.Nome == "")
                 {
-                    notificationResult.Add(new NotificationError("Nome Inválido", NotificationErrorType.BUSINESS_RULES));
+                    notificationResult.Add(new NotificationError("Nome inválido!", NotificationErrorType.USER));
                 }
 
-                if (!entidade.Site.Validar())
+                if (entidade.Site == "")
                 {
-                    notificationResult.Add(new NotificationError("Site Inválido", NotificationErrorType.BUSINESS_RULES));
+                    notificationResult.Add(new NotificationError("Nome inválido!", NotificationErrorType.USER));
                 }
 
-                if (NotificationResult.IsValid)
+                if (notificationResult.IsValid)
                 {
-                    _repositorioDistribuidora.Adicionar(entidade);
+                    if (entidade.idDistribuidora == 0)
+                        _repositorioDistribuidora.Adicionar(entidade);
+                    else
+                        _repositorioDistribuidora.Atualizar(entidade);
 
-                    NotificationResult.Add("Produto cadastrado com sucesso.");
+                    notificationResult.Add("Distribuidora cadastrada com sucesso.");
                 }
 
                 notificationResult.Result = entidade;
 
                 return notificationResult;
-
             }
-
             catch(Exception ex)
             {
                 return notificationResult.Add(new NotificationError(ex.Message));
             }
         }
 
+        public IEnumerable<Distribuidora> ListarTodas()
+        {
+            return _repositorioDistribuidora.ListarTodasAsDistribuidoras();
+        }
     }
 }
