@@ -8,7 +8,7 @@ using System.Text;
 
 namespace RMJ.Dados.Configuracoes
 {
-    class ConfiguracaoAvaliacao:
+    public class ConfiguracaoAvaliacao:
         IEntityTypeConfiguration<Avaliacao>
     {
         public void Configure(EntityTypeBuilder<Avaliacao> builder)

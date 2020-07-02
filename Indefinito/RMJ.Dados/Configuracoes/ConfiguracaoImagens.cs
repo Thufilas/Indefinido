@@ -7,7 +7,7 @@ using System.Text;
 
 namespace RMJ.Dados.Configuracoes
 {
-    class ConfiguracaoImagens :
+    public class ConfiguracaoImagens :
         IEntityTypeConfiguration<Imagens>
     {
         public void Configure(EntityTypeBuilder<Imagens> builder)

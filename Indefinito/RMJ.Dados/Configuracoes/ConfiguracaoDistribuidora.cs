@@ -7,7 +7,7 @@ using System.Text;
 
 namespace RMJ.Dados.Configuracoes
 {
-    class ConfiguracaoDistribuidora :
+    public class ConfiguracaoDistribuidora :
         IEntityTypeConfiguration<Distribuidora>
 
     {

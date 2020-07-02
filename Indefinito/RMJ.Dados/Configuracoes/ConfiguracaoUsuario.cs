@@ -7,7 +7,7 @@ using System.Text;
 
 namespace RMJ.Dados.Configuracoes
 {
-    class ConfiguracaoUsuario :
+    public class ConfiguracaoUsuario :
         IEntityTypeConfiguration<Usuario>
     {
         public void Configure(EntityTypeBuilder<Usuario> builder)

@@ -7,7 +7,7 @@ using System.Text;
 
 namespace RMJ.Dados.Configuracoes
 {
-	class ConfiguracaoJogo :
+	public class ConfiguracaoJogo :
 		IEntityTypeConfiguration<Jogo>
 	{
 		public void Configure(EntityTypeBuilder<Jogo> builder)

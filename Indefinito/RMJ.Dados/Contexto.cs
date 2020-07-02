@@ -22,7 +22,7 @@ namespace RMJ.Dados
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=10.107.176.41;database=dbLAB2_2020;user id=visualstudio;password=visualstudio;");
+            optionsBuilder.UseSqlServer("server=201.62.57.93;database=dbLAB2_2020;user id=visualstudio;password=visualstudio;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -7,7 +7,7 @@ using System.Text;
 
 namespace RMJ.Dados.Configuracoes
 {
-    class ConfiguracaoEstiloDeJogo :
+    public class ConfiguracaoEstiloDeJogo :
         IEntityTypeConfiguration<EstiloDeJogo>
 
     {

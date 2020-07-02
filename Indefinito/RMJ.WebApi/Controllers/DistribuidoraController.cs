@@ -13,6 +13,8 @@ using Microsoft.AspNetCore.Http;
 
 namespace RMJ.WebApi.Controllers
 {
+    [Route("[controller]")]
+    [ApiController]
     public class DistribuidoraController : ControllerBase
     {
         private readonly DistribuidoraServico distribuidoraServico;
@@ -23,7 +25,10 @@ namespace RMJ.WebApi.Controllers
         }
 
         [HttpGet("ativos")]
-        public IEnumerable<Distribuidora> Ativos() => distribuidoraServico.ListarTodas();
+        public IEnumerable<Distribuidora> Ativos()
+        {
+            return distribuidoraServico.ListarTodas();
+        }
 
         [HttpPost("Salvar")]
         public NotificationResult Salvar(Distribuidora entidade)
