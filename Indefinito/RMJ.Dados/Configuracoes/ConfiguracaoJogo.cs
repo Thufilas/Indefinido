@@ -12,8 +12,8 @@ namespace RMJ.Dados.Configuracoes
 	{
 		public void Configure(EntityTypeBuilder<Jogo> builder)
 		{
-			builder.ToTable("Jogo");
-			builder.HasKey("idJogo");
+			builder.ToTable("Jogo", "RankingJogo");
+			builder.HasKey(f => f.idJogo);
 			builder.Property(f => f.Nome).HasColumnName("Nome")
                 .IsRequired()
 				.HasMaxLength(50);

@@ -44,7 +44,10 @@ namespace RMJ.Servico
                 }
 
                 else
+                {
+                    _jogo.Atualizar(entidade);
                     return NotificationResult.Add(new NotificationError("Erro ao realizar cadastro!", NotificationErrorType.USER)); ;
+                }
             }
 
             catch (Exception ex)

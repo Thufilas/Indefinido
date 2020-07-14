@@ -36,13 +36,13 @@ namespace RMJ.WebApi.Controllers
                 return jogoServico.Salvar(entidade);
             }
             
-            [HttpPost("Atualizar")]
+            [HttpPut("Atualizar")]
             public NotificationResult Atualizar(Jogo entidade)
             {
                 return jogoServico.Atualizar(entidade);
             }
 
-            [HttpPost("Deletar")]
+            [HttpDelete("Deletar")]
             public NotificationResult Excluir(Jogo entidade)
             {
                 return jogoServico.Excluir(entidade);

@@ -14,7 +14,6 @@ namespace RMJ.Dados
         public DbSet<Avaliacao> Avaliacao { get; set;}
         public DbSet<Distribuidora> Distribuidora { get; set; }
         public DbSet<EstiloDeJogo> EJogo { get; set; }
-        public DbSet<Fornecedora> Fornecedora { get; set; }
         public DbSet<Imagens> Imagens { get; set; }
         public DbSet<Jogo> Jogo { get; set; }
         public DbSet<Login> Login { get; set; }

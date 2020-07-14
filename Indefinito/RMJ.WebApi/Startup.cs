@@ -25,17 +25,9 @@ namespace RMJ.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddCors(options =>
-            {
-                options.AddPolicy(name: MyAllowSpecificOrigins,
-                                   builder =>
-                                   {
-                                       builder.WithOrigins("http://localhost:3000",
-                                                           "http://www.contoso.com");
-                                   });
-            });
 
-            services.AddControllers();
+            services.AddCors();
+            services.AddControllers().AddNewtonsoftJson();
 
             services.AddSwaggerGen(c => {
 
@@ -70,7 +62,11 @@ namespace RMJ.WebApi
 
             app.UseRouting();
 
-            app.UseCors();
+            app.UseCors(x =>
+               x.AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader()
+            );
 
             app.UseAuthorization();
 

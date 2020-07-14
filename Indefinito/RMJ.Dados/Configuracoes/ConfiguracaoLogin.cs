@@ -12,13 +12,14 @@ namespace RMJ.Dados.Configuracoes
     {
         public void Configure(EntityTypeBuilder<Login> builder)
         {
-            builder.HasKey("idLogin");
+            builder.ToTable("Login", "RankingJogo");
+            builder.HasKey(f => f.idLogin);
             builder.Property(f => f.Nickname).HasColumnName("Nickname")
                 .IsRequired()
-                .HasMaxLength(100);
+                .HasMaxLength(50);
             builder.Property(f => f.Senha).HasColumnName("Senha")
                 .IsRequired()
-                .HasMaxLength(30);
+                .HasMaxLength(50);
         }
     }
 }

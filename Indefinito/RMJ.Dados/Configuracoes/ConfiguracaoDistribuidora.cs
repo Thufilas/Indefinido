@@ -13,8 +13,8 @@ namespace RMJ.Dados.Configuracoes
     {
         public void Configure(EntityTypeBuilder<Distribuidora> builder)
         {
-            builder.ToTable("Distribuidora");
-            builder.HasKey("idDistribuidora");
+            builder.ToTable("Distribuidora", "RankingJogo");
+            builder.HasKey(f => f.idDistribuidora);
             builder.Property(f => f.Nome).HasColumnName("Nome")
                 .IsRequired()
                 .HasMaxLength(100);

@@ -13,8 +13,8 @@ namespace RMJ.Dados.Configuracoes
     {
         public void Configure(EntityTypeBuilder<Avaliacao> builder)
         {
-            builder.ToTable("Avaliacao");
-            builder.HasKey("idAvaliacao");
+            builder.ToTable("Avaliacao", "RankingJogo");
+            builder.HasKey(f => f.idAvaliacao);
             builder.Property(f => f.idAvaliacao).HasColumnName("idAvalicao");
             builder.Property(f => f.idUsuario).HasColumnName("idUsuario");
             builder.Property(f => f.idJogo).HasColumnName("idJogo");
